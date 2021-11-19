@@ -102,7 +102,7 @@ function addData() {
 // Edit Modal
 function editData(giaovienid) {
     document.getElementsByClassName("modal-title")[0].innerHTML = "Edit Teacher";
-    var footerModal = `<button class="btn btn-info" onclick="updateData(${giaovienid})">Edit Data</button>`;
+    var footerModal = `<button class="btn btn-info" onclick="updateData(${giaovienid})">Update Data</button>`;
     document.getElementsByClassName("modal-footer")[0].innerHTML = footerModal;
     //Get Data lên Modal Edit
     service
@@ -133,6 +133,27 @@ function updateData(id) {
     var loainguoidung = document.getElementById("loaiNguoiDung").value;
     var ngonngu = document.getElementById("loaiNgonNgu").value;
     var mota = document.getElementById("MoTa").value;
+
+    var isValid = true;
+
+    isValid &= validation.checkEmpty(taikhoan, "Tài khoản không được để trống", "spanTaikhoan");
+
+    isValid &= validation.checkEmpty(hoten, "Họ tên không được để trống", "spanHoten") && validation.checkName(hoten,"Ký tự không hợp lệ","spanHoten");
+
+    isValid &= validation.checkEmpty(matkhau,"Mật khẩu không được để trống","spanPasswork") && validation.checkPass(matkhau,"Mật khẩu gồm 1 ký tự Hoa, 1 ký tự đặc biệt, 1 ký tự số, độ dài từ 6-8 ký tự","spanPasswork");
+
+    isValid &= validation.checkEmpty(email,"Email không được để trống","spanEmail") && validation.checkEmail(email,"Email không đúng định dạng","spanEmail");
+
+    isValid &= validation.checkEmpty(hinhanh,"Hình ảnh không được để trống","spanHinhanh");
+
+    isValid &= validation.checkSelect("loaiNguoiDung","Hãy chọn loại người dùng","spanLoaiNd");
+
+    isValid &= validation.checkSelect("loaiNgonNgu","Hãy chọn loại ngôn ngữ","spanLoaingonngu");
+
+    isValid &= validation.checkEmpty(mota,"Mô tả không được để trống","spanMota") && validation.checkRange(mota,"Mô tả dưới 60 ký tự","spanMota");
+
+    if (isValid)
+
     var newteacher = new Teacher(id, taikhoan, hoten, matkhau, email, loainguoidung, ngonngu, mota, hinhanh);
     service
         .updateApi(newteacher)
