@@ -1,0 +1,11 @@
+@mixin wavyBtn($color,$fs,$bd-color){
+    background: $color;
+    font-size: $fs;
+    border-radius: 50px;
+    border-color: $bd-color;
+    
+}
+@mixin btnHover($text-color,$bg-color){
+    color: $text-color;
+    background-color: $bg-color;
+}

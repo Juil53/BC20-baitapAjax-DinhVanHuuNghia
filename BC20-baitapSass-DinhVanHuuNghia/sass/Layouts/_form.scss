@@ -1,0 +1,88 @@
+.wavyForm {
+    position: relative;
+    .row {
+        width: 90%;
+        margin: auto;
+        z-index: 1;
+    }
+    .wavyFormImg {
+        max-width: 100%;
+        img{
+            width: 100%;
+        }
+    }
+    .wavyFormDetails {
+        // flex-basis: 38%;
+        max-width: 100%;
+        height: 100%;
+    }
+    .wavyFormDetails {
+        border-radius: 10px;
+        background-color: $color-white;
+        box-shadow: 0 30px 30px -10px rgba(0, 0, 0, 0.2);
+        h3 {
+            @include styleText($color-black-1, $fs-6, $fw-3);
+        }
+        .wavyFormBtn {
+            button {
+                @include wavyBtn($color-pink, $fs-2, $color-pink);
+                &:hover {
+                    @include btnHover($color-pink, $color-white);
+                }
+            }
+        }
+        .form-group {
+            position: relative;
+            i {
+                position: absolute;
+                top: 10px;
+                left: 18px;
+                color: $color-pink;
+            }
+        }
+        input,
+        select {
+            border-radius: 50px;
+            padding-left: $pd-7;
+            &:focus {
+                box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1);
+                border: 1px solid rgba(0, 0, 0, 0.3);
+            }
+        }
+        textarea {
+            border-radius: 10px;
+            padding-left: $pd-7;
+            &:focus {
+                box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1);
+                border: 1px solid rgba(0, 0, 0, 0.3);
+            }
+        }
+    }
+    .wavyFormBtm{
+        position: absolute;
+        bottom: 0px;
+        z-index: -1;
+        img{
+            width: 100%;
+        }
+    }
+}
+
+//RESPONSIVE
+@include mediaQuery("small"){
+    .wavyFormBtn{
+        button{
+            width: 100%;
+        }
+    }
+}
+@include mediaQuery("large"){
+    .wavyForm{
+        .wavyFormImg {
+            max-width: 100%;
+            img{
+                width: 80%;
+            }
+        }
+    }
+}

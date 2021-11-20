@@ -1,0 +1,82 @@
+footer {
+    padding-top: $pd-8;
+    background-color: $color-pink-3;
+    position: relative;
+    z-index: 0;
+    .container {
+        padding-top: $pd-1;
+        z-index: 1;
+        h3 {
+            @include styleText($color-white, $fs-5, $fw-4);
+        }
+        .wavyContact {
+            p {
+                &:nth-of-type(1)::before {
+                    padding-right: $pd-5;
+                    @include icon("\f3c5");
+                }
+                &:nth-of-type(2)::before {
+                    @include icon("\f095");
+                    padding-right: $pd-5;
+                }
+                &:nth-of-type(3)::before {
+                    @include icon("\f017");
+                    padding-right: $pd-5;
+                }
+            }
+            @include styleText($color-white, $fs-1, $fw-2);
+            i {
+                @include styleText($color-white, $fs-1, $fw-2);
+                cursor: pointer;
+                transition: all 0.5s;
+                &:hover {
+                    @include styleText($color-black-2, $fs-1, $fw-2);
+                }
+            }
+        }
+        li {
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            a {
+                @include styleText($color-white, $fs-1, $fw-2);
+                transition: all 0.5s;
+                &:hover {
+                    text-decoration: none;
+                    @include styleText($color-white, $fs-1, $fw-2);
+                    opacity: 0.8;
+                }
+            }
+        }
+        .form-group {
+            input {
+                @include wavyBtn($color-pink-3, $fs-2, $color-gray);
+                text-align: center;
+                color: $color-white;
+                &:focus {
+                    box-shadow: 0 0 4px 0 rgba(255, 255, 255, 0.979);
+                    border: 1px solid $color-white;
+                }
+                &::placeholder {
+                    color: $color-white;
+                }
+            }
+            button {
+                @include wavyBtn($color-white, $fs-2, $color-gray);
+                @include styleText($color-black-1, $fs-2, $fw-3);
+                text-align: center;
+                line-height: 0px;
+                transition: all 0.2s;
+                &:hover {
+                    @include btnHover($color-white, $color-pink-3);
+                    border-color: $color-white;
+                }
+            }
+        }
+    }
+    .footerimg{
+        img {
+            position: absolute;
+            z-index: -1;
+            width: 100%;
+        }
+    }
+}

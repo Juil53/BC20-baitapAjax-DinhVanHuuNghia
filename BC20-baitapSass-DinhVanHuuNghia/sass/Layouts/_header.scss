@@ -1,0 +1,76 @@
+#header{
+    position: fixed;
+    width: 100%;
+    margin: auto;
+    top: 0;
+    z-index: 99;
+    background-color: transparent;
+    transition: all .3s;
+    @include styleText($color-black-2,$fs-1,$fw-3);
+    .navbar{
+        padding: 0 0;
+        .navbar-brand{
+            img{
+                width: 20%;
+            }
+        }
+    }
+    .headerBtn{
+        button{
+            @include wavyBtn($color-pink,$fs-2,$color-pink);
+            @include styleText($color-white,$fs-2,$fw-2);
+            &:hover{
+                @include btnHover($color-pink,$color-white);
+            }
+        }
+        i:hover{
+            @include btnHover($color-pink,null);
+        }    
+    }
+
+}
+
+// RESPONSIVE
+@include mediaQuery("large"){
+    #header{
+        .container{
+            max-width: 100%;
+            background-color: $color-white;
+            .navbar-brand{
+                position: relative;
+                left: 60px;
+                img{
+                    width: 5%;
+                }
+            }
+            .navbar-toggler{
+                position: absolute;
+                left: 0px;
+                z-index: 1;
+                display: block;
+            }
+            .navbar-toggler-transform {
+                top: -5px;
+            }
+            .navbar-collapse{
+                background-color: white;
+            }
+            .headerBtn{
+                display: none;
+            }
+        }
+    }
+}
+@include mediaQuery("medium"){
+    #header{
+        .container{
+            .navbar-brand{
+                position: relative;
+                left: 60px;
+                img{
+                    width: 10%;
+                }
+            }
+        }
+    }
+}

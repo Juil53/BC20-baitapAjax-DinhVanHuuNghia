@@ -1,0 +1,49 @@
+//Colors
+$color-pink:#b61984;
+$color-pink-2:#dcd1f3;
+$color-pink-3:#aa017e;
+$color-black-1:#191919;
+$color-black-2:#181818;
+$color-white:#ffffff;
+$color-gray:#ffffff1a;
+
+//Padding
+$pd-1:50px;
+$pd-2:15px;
+$pd-3:20px;
+$pd-4:30px;
+$pd-5:12px;
+$pd-6:25px;
+$pd-7:40px;
+$pd-8:70px;
+
+//Margin
+$mg-1:6px;
+$mg-2:7.8px;
+
+//Font-Size
+$fs-1:13px;
+$fs-2:16px;
+$fs-3:57px;
+$fs-4:11px;
+$fs-5:23px;
+$fs-6:37px;
+
+//Font-Weight
+$fw-1:300;
+$fw-2:400;
+$fw-3:600;
+$fw-4:700;
+$fw-5:900;
+
+//break points
+$breakpoints: (
+    "extra-large": 1200px,
+    "large": 992px,
+    "medium": 768px,
+    "small": 576px,
+    "extra-large-down": 1199.98px,
+    "large-down": 991.98px,
+    "medium-down": 767.98px,
+    "small-down": 575.98px,
+);

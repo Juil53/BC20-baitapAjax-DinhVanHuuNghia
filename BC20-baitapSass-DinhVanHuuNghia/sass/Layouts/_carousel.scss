@@ -1,0 +1,30 @@
+.wavyCarousel{
+    position: relative;
+    padding-top: $pd-8;
+    padding-bottom: $pd-1;
+    .wavyTopCarousel{
+        position: absolute;
+        top: 0;
+        img{
+            width: 100%;
+        }
+    }
+    .wavyMidCarousel{
+        h3{
+            @include styleText($color-pink,$fs-2,$fw-3);
+        }
+        h2{
+            @include styleText($color-black-1,$fs-3,$fw-4);
+        }
+        img{
+            width: 100%;
+        }
+    }
+    .wavyBtmCarousel{
+        position: absolute;
+        bottom: 0;
+        img{
+            width: 100%;
+        }
+    }
+}

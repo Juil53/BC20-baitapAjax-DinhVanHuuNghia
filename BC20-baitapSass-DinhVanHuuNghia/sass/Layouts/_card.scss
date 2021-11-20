@@ -1,0 +1,49 @@
+.wavyCard{
+    position: relative;
+    background: $color-pink-2;
+    text-align: center;
+    .card{
+        background-color: $color-white;
+        border: none;
+        overflow: hidden;
+        transition: all .5s;
+        z-index: 1;
+        &:hover{
+            box-shadow: 0 30px 30px -10px rgba(0, 0, 0, 0.2);
+        }
+        .wavyimg{
+            overflow: hidden;
+            img{
+                transform: scale(1);
+                transition: all 0.5s;
+                &:hover{
+                    transform: scale(1.1);
+                }
+            }
+        }
+        .card-body{
+            p{
+                @include styleText($color-pink,$fs-4,$fw-3);
+                margin-bottom: $mg-2;
+            }
+            .card-title{
+                @include styleText($color-black-1,$fs-5,$fw-3);
+            }
+            .card-text{
+                @include styleText($color-black-1,$fs-2,$fw-2);
+            }
+        }
+    }
+    .wavyCardBg{
+        position: absolute;
+        bottom: 0;
+        z-index: 0;
+        img{
+            width: 100%;
+            overflow: hidden;
+        }
+    }
+}
+
+// RESPONSIVE
+

@@ -1,0 +1,455 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: #181818;
+  text-decoration: none;
+}
+
+html, body {
+  font-family: 'Roboto', sans-serif;
+  color: #181818;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+#header {
+  position: fixed;
+  width: 100%;
+  margin: auto;
+  top: 0;
+  z-index: 99;
+  background-color: transparent;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  color: #181818;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+#header .navbar {
+  padding: 0 0;
+}
+
+#header .navbar .navbar-brand img {
+  width: 20%;
+}
+
+#header .headerBtn button {
+  background: #b61984;
+  font-size: 16px;
+  border-radius: 50px;
+  border-color: #b61984;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+#header .headerBtn button:hover {
+  color: #b61984;
+  background-color: #ffffff;
+}
+
+#header .headerBtn i:hover {
+  color: #b61984;
+}
+
+@media screen and (max-width: 992px) {
+  #header .container {
+    max-width: 100%;
+    background-color: #ffffff;
+  }
+  #header .container .navbar-brand {
+    position: relative;
+    left: 60px;
+  }
+  #header .container .navbar-brand img {
+    width: 5%;
+  }
+  #header .container .navbar-toggler {
+    position: absolute;
+    left: 0px;
+    z-index: 1;
+    display: block;
+  }
+  #header .container .navbar-toggler-transform {
+    top: -5px;
+  }
+  #header .container .navbar-collapse {
+    background-color: white;
+  }
+  #header .container .headerBtn {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #header .container .navbar-brand {
+    position: relative;
+    left: 60px;
+  }
+  #header .container .navbar-brand img {
+    width: 10%;
+  }
+}
+
+.wavyCarousel {
+  position: relative;
+  padding-top: 70px;
+  padding-bottom: 50px;
+}
+
+.wavyCarousel .wavyTopCarousel {
+  position: absolute;
+  top: 0;
+}
+
+.wavyCarousel .wavyTopCarousel img {
+  width: 100%;
+}
+
+.wavyCarousel .wavyMidCarousel h3 {
+  color: #b61984;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.wavyCarousel .wavyMidCarousel h2 {
+  color: #191919;
+  font-size: 57px;
+  font-weight: 700;
+}
+
+.wavyCarousel .wavyMidCarousel img {
+  width: 100%;
+}
+
+.wavyCarousel .wavyBtmCarousel {
+  position: absolute;
+  bottom: 0;
+}
+
+.wavyCarousel .wavyBtmCarousel img {
+  width: 100%;
+}
+
+.wavyCard {
+  position: relative;
+  background: #dcd1f3;
+  text-align: center;
+}
+
+.wavyCard .card {
+  background-color: #ffffff;
+  border: none;
+  overflow: hidden;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  z-index: 1;
+}
+
+.wavyCard .card:hover {
+  -webkit-box-shadow: 0 30px 30px -10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 30px 30px -10px rgba(0, 0, 0, 0.2);
+}
+
+.wavyCard .card .wavyimg {
+  overflow: hidden;
+}
+
+.wavyCard .card .wavyimg img {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.wavyCard .card .wavyimg img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.wavyCard .card .card-body p {
+  color: #b61984;
+  font-size: 11px;
+  font-weight: 600;
+  margin-bottom: 7.8px;
+}
+
+.wavyCard .card .card-body .card-title {
+  color: #191919;
+  font-size: 23px;
+  font-weight: 600;
+}
+
+.wavyCard .card .card-body .card-text {
+  color: #191919;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.wavyCard .wavyCardBg {
+  position: absolute;
+  bottom: 0;
+  z-index: 0;
+}
+
+.wavyCard .wavyCardBg img {
+  width: 100%;
+  overflow: hidden;
+}
+
+.wavyForm {
+  position: relative;
+}
+
+.wavyForm .row {
+  width: 90%;
+  margin: auto;
+  z-index: 1;
+}
+
+.wavyForm .wavyFormImg {
+  max-width: 100%;
+}
+
+.wavyForm .wavyFormImg img {
+  width: 100%;
+}
+
+.wavyForm .wavyFormDetails {
+  max-width: 100%;
+  height: 100%;
+}
+
+.wavyForm .wavyFormDetails {
+  border-radius: 10px;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 30px 30px -10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 30px 30px -10px rgba(0, 0, 0, 0.2);
+}
+
+.wavyForm .wavyFormDetails h3 {
+  color: #191919;
+  font-size: 37px;
+  font-weight: 600;
+}
+
+.wavyForm .wavyFormDetails .wavyFormBtn button {
+  background: #b61984;
+  font-size: 16px;
+  border-radius: 50px;
+  border-color: #b61984;
+}
+
+.wavyForm .wavyFormDetails .wavyFormBtn button:hover {
+  color: #b61984;
+  background-color: #ffffff;
+}
+
+.wavyForm .wavyFormDetails .form-group {
+  position: relative;
+}
+
+.wavyForm .wavyFormDetails .form-group i {
+  position: absolute;
+  top: 10px;
+  left: 18px;
+  color: #b61984;
+}
+
+.wavyForm .wavyFormDetails input,
+.wavyForm .wavyFormDetails select {
+  border-radius: 50px;
+  padding-left: 40px;
+}
+
+.wavyForm .wavyFormDetails input:focus,
+.wavyForm .wavyFormDetails select:focus {
+  -webkit-box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.wavyForm .wavyFormDetails textarea {
+  border-radius: 10px;
+  padding-left: 40px;
+}
+
+.wavyForm .wavyFormDetails textarea:focus {
+  -webkit-box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.wavyForm .wavyFormBtm {
+  position: absolute;
+  bottom: 0px;
+  z-index: -1;
+}
+
+.wavyForm .wavyFormBtm img {
+  width: 100%;
+}
+
+@media screen and (max-width: 576px) {
+  .wavyFormBtn button {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .wavyForm .wavyFormImg {
+    max-width: 100%;
+  }
+  .wavyForm .wavyFormImg img {
+    width: 80%;
+  }
+}
+
+footer {
+  padding-top: 70px;
+  background-color: #aa017e;
+  position: relative;
+  z-index: 0;
+}
+
+footer .container {
+  padding-top: 50px;
+  z-index: 1;
+}
+
+footer .container h3 {
+  color: #ffffff;
+  font-size: 23px;
+  font-weight: 700;
+}
+
+footer .container .wavyContact {
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+footer .container .wavyContact p:nth-of-type(1)::before {
+  padding-right: 12px;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "";
+}
+
+footer .container .wavyContact p:nth-of-type(2)::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "";
+  padding-right: 12px;
+}
+
+footer .container .wavyContact p:nth-of-type(3)::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "";
+  padding-right: 12px;
+}
+
+footer .container .wavyContact i {
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 400;
+  cursor: pointer;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+footer .container .wavyContact i:hover {
+  color: #181818;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+footer .container li {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+footer .container li a {
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 400;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+footer .container li a:hover {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 400;
+  opacity: 0.8;
+}
+
+footer .container .form-group input {
+  background: #aa017e;
+  font-size: 16px;
+  border-radius: 50px;
+  border-color: #ffffff1a;
+  text-align: center;
+  color: #ffffff;
+}
+
+footer .container .form-group input:focus {
+  -webkit-box-shadow: 0 0 4px 0 rgba(255, 255, 255, 0.979);
+          box-shadow: 0 0 4px 0 rgba(255, 255, 255, 0.979);
+  border: 1px solid #ffffff;
+}
+
+footer .container .form-group input::-webkit-input-placeholder {
+  color: #ffffff;
+}
+
+footer .container .form-group input:-ms-input-placeholder {
+  color: #ffffff;
+}
+
+footer .container .form-group input::-ms-input-placeholder {
+  color: #ffffff;
+}
+
+footer .container .form-group input::placeholder {
+  color: #ffffff;
+}
+
+footer .container .form-group button {
+  background: #ffffff;
+  font-size: 16px;
+  border-radius: 50px;
+  border-color: #ffffff1a;
+  color: #191919;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 0px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+footer .container .form-group button:hover {
+  color: #ffffff;
+  background-color: #aa017e;
+  border-color: #ffffff;
+}
+
+footer .footerimg img {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+}
+/*# sourceMappingURL=main.css.map */
